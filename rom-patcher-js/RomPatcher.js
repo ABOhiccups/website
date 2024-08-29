@@ -94,7 +94,7 @@ const RomPatcher = (function () {
 			if (!(patchFile instanceof BinFile))
 				throw new Error('Patch file is not an instance of BinFile');
 
-			patchFile.littleEndian = true;
+			patchFile.littleEndian = false;
 			patchFile.seek(0);
 
 			var header = patchFile.readString(6);
